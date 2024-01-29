@@ -1,38 +1,444 @@
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Chat {
+  border: 1px solid #ccc;
+  width: 400px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Messages {
+  padding: 10px;
+  height: 200px;
+  overflow-y: scroll;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Message {
+  margin-bottom: 8px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.InputContainer {
+  display: flex;
+  padding: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 8px;
+  margin-right: 8px;
+}
+
+button {
+  padding: 8px;
+  cursor: pointer;
+}
+* {
+  font-family: "Poppins";
+}
+.main body {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #dde5f4;
+  height: 100vh;
+}
+
+.screen-1 {
+  background: #f1f7fe;
+  padding: 2em;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  border-radius: 30px;
+  box-shadow: 0 0 2em #e6e9f9;
+  gap: 2em;
+}
+.screen-1 .logo {
+  margin-top: -3em;
+}
+.screen-1 .email {
+  background: white;
+  box-shadow: 0 0 2em #e6e9f9;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  border-radius: 20px;
+  color: #4d4d4d;
+  margin-top: -3em;
+}
+.screen-1 .email input {
+  outline: none;
+  border: none;
+}
+.screen-1 h1 {
+  text-align: center;
+  color: rgb(255, 120, 255);
+  font-weight: bold;
+  text-shadow: 2px 2px 2px black;
+  padding-bottom: 20px;
+}
+.screen-1 .email input::-moz-placeholder {
+  color: black;
+  font-size: 0.9em;
+}
+.screen-1 .email input:-ms-input-placeholder {
+  color: black;
+  font-size: 0.9em;
+}
+.screen-1 .email input::placeholder {
+  color: black;
+  font-size: 0.9em;
+}
+.screen-1 .email ion-icon {
+  color: #4d4d4d;
+  margin-bottom: -0.2em;
+}
+.screen-1 .password {
+  background: white;
+  box-shadow: 0 0 2em #e6e9f9;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  border-radius: 20px;
+  color: #4d4d4d;
+}
+.screen-1 .password input {
+  outline: none;
+  border: none;
+}
+.screen-1 .password input::-moz-placeholder {
+  color: black;
+  font-size: 0.9em;
+}
+.screen-1 .password input:-ms-input-placeholder {
+  color: black;
+  font-size: 0.9em;
+}
+.screen-1 .password input::placeholder {
+  color: black;
+  font-size: 0.9em;
+}
+.screen-1 .password ion-icon {
+  color: #4d4d4d;
+  margin-bottom: -0.2em;
+}
+.screen-1 .password .show-hide {
+  margin-right: -5em;
+}
+.screen-1 .login {
+  padding: 1em;
+  background: #3e4684;
   color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+}
+.screen-1 .footer {
+  display: flex;
+  font-size: 0.7em;
+  color: #5e5e5e;
+  gap: 14em;
+  padding-bottom: 10em;
+}
+.screen-1 .footer span {
+  cursor: pointer;
+}
+.screen-1 .footers {
+  display: flex;
+  font-size: 0.7em;
+  color: #5e5e5e;
+  gap: 14em;
+  padding-bottom: 2em;
+}
+.screen-1 .footers span {
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  cursor: pointer;
+}
+.uservalue{
+  cursor: pointer;
+  text-align: center;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s;
+  width: auto;
+  
+}
+.uservalue:hover {
+  border-color: #007bff;
+}
+.chat {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row; 
+  height: 90%;
+  width: 95%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.left-pane {
+  width: 30%;
+  background: #dde5f4;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+
+.right-pane {
+  width: 70%;
+  padding: 20px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.right{
+  background: #ef3535;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  margin-top: 20px;
+  height: 50%;
+  font-weight: 600;
+  float: right;
+}
+.sending{
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  margin-left: 8px;
+  float: right;
+}
+.container {
+  height: 70vh; /* 70% of the viewport height */
+  overflow-y: auto; /* Enable vertical scrollbar if content overflows */
+  box-sizing: border-box;
+  margin-bottom: 5vh;
+  border: none; 
+}
+.container1 {
+  height: 70vh; /* 70% of the viewport height */
+  overflow-y: auto; 
+  box-sizing: border-box;
+  border: none; 
+}
+.container1::-webkit-scrollbar {
+  display: none;
+}
+.message-box {
+  margin-bottom: 5%;
+  width: 99%;
+  position: relative;
+  cursor: pointer;
+  display: block;
+}
+/* .message-box:hover {
+  border-radius: 5%;
+  background-color: #e5eaf2; /* Change to the desired color on hover */
+/* } */ 
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #000000;
+  position: flex;
+  object-fit: cover;
+  top: 5%;  
+  margin-right: 5%;
+  float: left;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.message {
+  margin-top: 10px;
+}
+
+.chat-bubble {
+  clear: both;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 80%; /* Adjust as needed */
+  overflow: hidden;
+}
+
+.left-bubble {
+  float: left;
+  background-color: #a3d2ca;
+}
+
+.right-bubble {
+  float: right;
+  background-color: #4caf50;
+  color: #fff;
+}
+.typingbox {
+  width: 70%;
+  border-radius: 30px;
+}
+.row{
+  display: flex; 
+  justify-content: space-between;
+}
+.addbut{
+  background: #020202;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  margin-top: 20px;
+  height: 50%;
+  font-weight: 600;
+  float: right;
+}
+.imageSelect{
+  color: #4caf50;
+  border: none;
+  cursor: pointer;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+.mobile-menu-button {
+  display: none;
+}
+.mobile-add-button{
+  display: none;
+}
+.log-button{
+  margin-top: 20px;
+  padding: 1em;
+  background: #ef3535;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  display: block;
+}
+.img-button{
+  padding: 1em;
+  background: #1beb26;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  display: block;
+}
+.choose-button{
+  padding: 1em;
+  background: #1b87eb;
+  margin-right: 10%;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  display: block;
+}
+.yes-button{
+  padding: 1em;
+  background: #1beb26;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  display: block;
+}
+.no-button{
+  padding: 1em;
+  background: #eb1b1b;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  display: block;
+}
+
+
+.circle-row {
+  display: flex;
+}
+.input-container{
+  margin-bottom: 5%;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #000000;
+  background-color: #4caf50; /* You can change the background color as desired */
+  margin: 5px; /* Adjust the margin as needed for spacing */
+}
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  .img-button{
+    display: none;
+  }
+  .avatar {
+    margin-bottom: 10%;
+  }
+  .name {
+    display: none;
+  }
+  
+  .message {
+    display: none;
+  }
+  .left-pane {
+    display: none;
+  }
+
+  .left-pane.show {
+    width: 20%;
+    display: block;
+  }
+
+  .right-pane {
+    width: 100%;
+  }
+  .right-pane.block {
+    display: none;
+  }
+  .addbut{
+    display: none;
+  }
+  .mobile-add-button{
+    margin-top: 10px;
+    padding: 1em;
+    background: #3e4684;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    display: block;
+  }
+  .mobile-menu-button {
+    display: block;
+    position: fixed;
+    top: 30px;
+    left: 10px;
+    z-index: 999;
+    cursor: pointer;
   }
 }
