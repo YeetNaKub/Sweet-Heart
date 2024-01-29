@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Sweet-Heart/static/css/main.efe29d5b.css",
+    "main.js": "/Sweet-Heart/static/js/main.1239b3f4.js",
+    "static/js/787.6f3d5515.chunk.js": "/Sweet-Heart/static/js/787.6f3d5515.chunk.js",
+    "index.html": "/Sweet-Heart/index.html",
+    "main.efe29d5b.css.map": "/Sweet-Heart/static/css/main.efe29d5b.css.map",
+    "main.1239b3f4.js.map": "/Sweet-Heart/static/js/main.1239b3f4.js.map",
+    "787.6f3d5515.chunk.js.map": "/Sweet-Heart/static/js/787.6f3d5515.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.efe29d5b.css",
+    "static/js/main.1239b3f4.js"
+  ]
+}
